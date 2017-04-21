@@ -107,7 +107,12 @@ render() {
 
       <Header />
       {swipeList && <Swipe data={swipeList} hackHeight='home-swipe' {...settings} />}
-
+      <div className='bg-white hor pt30'>
+        {fastNav.map((item,index)=>
+          <FastNav key={index} data={item}/>
+        )}
+      </div>
+      <Message data={messages}/>
 
     </div>
   )

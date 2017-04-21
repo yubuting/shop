@@ -13,10 +13,17 @@ export default class Swipe extends Component {
         </a>
     } else {
       list = 
-        <Carousel {...rest}></Carousel>
+        <Carousel {...rest}>
+          {
+            data.map((item,index)=>
+              <a key={index} href={item.link}><img src={item.thumb} className={'img-responsive'+hackHeight} alt=""/></a>
+            )
+          }
+        </Carousel>
     }
 
-    return (<div>
+    return (
+    <div>
       {list}
     </div>)
 
