@@ -113,7 +113,7 @@ render() {
         )}
       </div>
       <Message data={messages}/>
-
+      <Title text='精品好店' linkName='查看全部' path='/shop'/>
     </div>
   )
 
